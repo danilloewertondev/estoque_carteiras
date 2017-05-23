@@ -31,3 +31,15 @@ Route::get('/referencias/busca/{id}', 'ReferenciaController@busca');
 Route::post('/referencias/alterado/{id}', 'ReferenciaController@alterado');
 
 Route::get('/referencias/remove/{id}', 'ReferenciaController@remove');
+
+Route::get('/tipodecouros', 'TipoDeCouroController@lista');
+
+Route::get('/tipodecouros/novo', 'TipoDeCouroController@novo');
+
+Route::post('/tipodecouros/adiciona', 'TipoDeCouroController@adiciona');
+
+Route::get('/tipodecouros/busca/{id}', 'TipoDeCouroController@busca');
+
+Route::post('/tipodecouros/alterado/{id}', 'TipoDeCouroController@alterado');
+
+Route::get('/tipodecouros/remove/{id}', 'TipoDeCouroController@remove');

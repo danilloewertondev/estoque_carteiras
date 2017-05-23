@@ -2,7 +2,7 @@
 
 @section('conteudo')
 
-<h1>Novo produto</h1>
+<h1>Nova referencia</h1>
 
 <form action="/referencias/adiciona" method="post">
 

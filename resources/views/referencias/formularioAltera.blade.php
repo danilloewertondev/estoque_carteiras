@@ -1,9 +1,6 @@
 @extends('layout.principal')
 
 @section('conteudo')
-
-<h1>Alterar produto</h1>
-
 <h1 class="center">Atualizar produto:</h1>
 <form action="/referencias/alterado/{{$r->id}}" method="post">
 

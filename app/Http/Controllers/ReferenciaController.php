@@ -26,8 +26,8 @@ class ReferenciaController extends Controller{
 	}
 
 	public function remove($id){
-		$produto = Referencia::find($id);
-		$produto->delete();
+		$referencias = Referencia::find($id);
+		$referencias->delete();
 		return redirect()->action('ReferenciaController@lista');
 	}
 		//busca para alterar
