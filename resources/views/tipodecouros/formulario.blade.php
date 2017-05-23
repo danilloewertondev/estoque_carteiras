@@ -2,6 +2,16 @@
 
 @section('conteudo')
 
+@if (count($errors) > 0)
+<div class="alert alert-danger">
+	@foreach($errors->all() as $error) 
+	<ul> 
+		<li>{{$error}}</li>
+	</ul>
+	@endforeach
+</div>
+@endif
+
 <h1>Novo tipo de couro</h1>
 
 <form action="/tipodecouros/adiciona" method="post">

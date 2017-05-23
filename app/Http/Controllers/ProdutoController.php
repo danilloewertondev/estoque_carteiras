@@ -4,6 +4,7 @@ use estoque\Produto;
 use Request;
 use estoque\Referencia;
 use estoque\TipoDeCouro;
+use estoque\Http\Requests\ProdutoRequest;
 
 class ProdutoController extends Controller{
 
@@ -19,8 +20,8 @@ class ProdutoController extends Controller{
 		return view('produtos/formulario')->with('referencias', Referencia::all())->with('tipodecouros', TipoDeCouro::all());
 	}
 
-	public function adiciona(){
-		Produto::create(Request::all());
+	public function adiciona(ProdutoRequest $request){
+		Produto::create($request->all());
 		return redirect()
 		->action('ProdutoController@lista');
 	}
@@ -37,14 +38,14 @@ class ProdutoController extends Controller{
 		if(empty($resposta)) {
 			return "Esse produto não existe";
 		}
-		return view('produtos/formularioAltera')->with('p', $resposta)->with('r', Referencia::all());
+		return view('produtos/formularioAltera')->with('p', $resposta)->with('r', Referencia::all())->with('tipodecouros', TipoDeCouro::all());
 
 	}
 
-	public function alterado($id){
+	public function alterado(ProdutoRequest $request, $id){
 
 		$produto = Produto::find($id);
-		$valores = Request::all();
+		$valores = $request->all();
 
 		$produto->fill($valores)->save();
 

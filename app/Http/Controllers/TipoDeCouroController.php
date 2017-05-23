@@ -4,6 +4,7 @@ use estoque\Referencia;
 use estoque\Produto;
 use estoque\TipoDeCouro;
 use Request;
+use estoque\Http\Requests\TipoDeCouroRequest;
 
 
 class TipoDeCouroController extends Controller{
@@ -20,8 +21,8 @@ class TipoDeCouroController extends Controller{
 		return view('tipodecouros/formulario')->with('tipodecouros', TipoDeCouro::all());
 	}
 
-	public function adiciona(){
-		TipoDeCouro::create(Request::all());
+	public function adiciona(TipoDeCouroRequest $tipoDeCouroRequest){
+		TipoDeCouro::create($tipoDeCouroRequest->all());
 		return redirect()
 		->action('TipoDeCouroController@lista');
 	}

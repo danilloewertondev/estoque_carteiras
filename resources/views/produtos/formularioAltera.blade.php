@@ -2,7 +2,15 @@
 
 @section('conteudo')
 
-<h1>Novo produto</h1>
+@if (count($errors) > 0)
+<div class="alert alert-danger">
+	@foreach($errors->all() as $error) 
+	<ul> 
+		<li>{{$error}}</li>
+	</ul>
+	@endforeach
+</div>
+@endif
 
 <h1 class="center">Atualizar produto:</h1>
 <form action="/produtos/alterado/{{$p->id}}" method="post">
@@ -32,8 +40,23 @@
 		</select> 
 
 	</div>
+
+		<div class="form-group">
+		<label>Tipo de Couro </label>
+		
+		 <select name="tipodecouro_id" class="form-control" >
+			@foreach($tipodecouros as $t)
+			@if($t->id  ==  $p->referencia_id )
+			<option selected value="{{ $t->id }}">{{ $t->nome_couro }}</option>
+			@else
+			<option value="{{ $t->id }}">{{ $t->nome_couro }}</option>
+			@endif        
+			@endforeach
+		</select> 
+
+	</div>
 	
-	<button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+	<button type="submit" class="btn btn-primary btn-block">Alterar</button>
 </form>
 
 @stop

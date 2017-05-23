@@ -1,6 +1,17 @@
 @extends('layout.principal')
 
 @section('conteudo')
+
+@if (count($errors) > 0)
+<div class="alert alert-danger">
+	@foreach($errors->all() as $error) 
+	<ul> 
+		<li>{{$error}}</li>
+	</ul>
+	@endforeach
+</div>
+@endif
+
 <h1 class="center">Atualizar produto:</h1>
 <form action="/referencias/alterado/{{$r->id}}" method="post">
 

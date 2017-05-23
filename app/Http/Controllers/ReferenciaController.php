@@ -3,6 +3,7 @@
 use estoque\Referencia;
 use estoque\Produto;
 use Request;
+use estoque\Http\Requests\ReferenciaRequest;
 
 
 class ReferenciaController extends Controller{
@@ -19,8 +20,8 @@ class ReferenciaController extends Controller{
 		return view('referencias/formulario')->with('referencias', Referencia::all());
 	}
 
-	public function adiciona(){
-		Referencia::create(Request::all());
+	public function adiciona(ReferenciaRequest $referenciaRequest){
+		Referencia::create($referenciaRequest->all());
 		return redirect()
 		->action('ReferenciaController@lista');
 	}
@@ -41,10 +42,10 @@ class ReferenciaController extends Controller{
 
 	}
 
-	public function alterado($id){
+	public function alterado(ReferenciaRequest $referenciaRequest, $id){
 
 		$referencia = Referencia::find($id);
-		$valores = Request::all();
+		$valores = $referenciaRequest->all();
 
 		$referencia->fill($valores)->save();
 
