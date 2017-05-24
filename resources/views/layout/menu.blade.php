@@ -16,16 +16,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Carteiras <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Referencias</a></li>
-        <li><a href="#">Tipo De Couros</a></li>
+        <li class="active"><a href="/produtos">Carteiras <span class="sr-only">(current)</span></a></li>
+        <li><a href="/referencias">Referencias</a></li>
+        <li><a href="/tipodecouros">Tipo De Couros</a></li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Carteiras</a></li>
-            <li><a href="#">Referencias</a></li>
-            <li><a href="#">Couros</a></li>
+            <li><a href="/produtos/novo">Carteiras</a></li>
+            <li><a href="/referencias/novo">Referencias</a></li>
+            <li><a href="/tipodecouros/novo">Couros</a></li>
           
           </ul>
         </li>
@@ -34,7 +34,7 @@
 
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#">Sobre</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
