@@ -8,6 +8,10 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('/login', 'LoginController@form');
+
+Route::post('/login', 'LoginController@login');
+
 Route::get('/produtos', 'ProdutoController@lista');
 
 Route::get('/produtos/novo', 'ProdutoController@novo');

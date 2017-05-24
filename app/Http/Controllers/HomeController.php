@@ -1,5 +1,7 @@
 <?php namespace estoque\Http\Controllers;
 
+
+
 class HomeController extends Controller {
 
 	/*
