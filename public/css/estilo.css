@@ -1,0 +1,72 @@
+.margem {
+	margin-top: 24px;
+}
+.margembt{
+
+	margin-bottom: 20px;
+
+
+}
+@media(min-width: 768px) {
+	.margemlf {
+		margin-left: 23%;	
+	}
+}
+@media(min-width: 768px) {
+	.margemlf2 {
+		margin-left: 22%;	
+	}
+}
+
+.table-striped > tbody > tr {
+	
+}
+.table-hover > tbody > tr:hover{
+	color:#56183;
+	font-weight: bold;
+}
+
+@media(min-width: 1024px) {
+	#margemlf {
+		
+		margin-left: 230px;	
+
+	}
+}
+
+@media(min-width: 768px) {
+	.margemh1 {
+		margin-bottom: 15px;
+		margin-left: 32%;
+	}
+}
+
+
+@media(min-width: 768px) {
+	.margemh3 {
+		margin-bottom: 15px;
+		margin-left: 40%;
+	}
+}
+
+@media(min-width: 768px) {
+	.margembtm {
+		margin-bottom: 0;
+	}
+}
+
+@media(min-width: 768px) {
+	.margemTipoDeCouro {
+		margin-bottom: 15px;
+		margin-left: 25%;
+	}
+}
+@media(min-width: 768px) {
+	.margemTipoDeCouroAtualiza {
+		margin-bottom: 15px;
+		margin-left: 25%;
+		
+	}
+}
+
+

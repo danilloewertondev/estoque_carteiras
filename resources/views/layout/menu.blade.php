@@ -1,6 +1,5 @@
 <!-- navbar-->
-
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse margembtm">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -34,7 +33,7 @@
 
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sobre</a></li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
