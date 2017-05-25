@@ -1,3 +1,16 @@
+html,
+body {
+	height: 100%;
+}
+
+header {
+	background-image: url("/Imagens/carteira.jpg");
+	background-size: cover;
+	background-position: top center;
+	height: 100%;
+
+}
+
 .margem {
 	margin-top: 24px;
 }
@@ -70,3 +83,43 @@
 }
 
 
+
+.carteira-banner {
+	color: #FFF;
+	background-color: rgba(0, 0, 0, .5);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 80%;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+@media(min-width: 768px) {
+	.center {
+		
+		margin-left: 5%; 
+		width: 100%;
+
+
+
+
+	}
+}
+
+@media(min-width: 768px) {
+	.margemh1Login {
+	
+		margin: 0;
+		font-weight: bold;
+
+	}
+}
+
+#tituloCenter{
+	text-align: center;
+	margin-left: 4%;
+}
