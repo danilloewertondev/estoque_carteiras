@@ -16,6 +16,15 @@
 	<h2 class="centerH1">Venda</h2>
 	<div class="container"><div class="col-xs-12 col-sm-5 col-sm-offset-4 col-md-9 col-md-offset-2  margembt"> 
 
+		<input type="hidden" 
+		name="_token" value="{{{ csrf_token() }}}" />
+
+		
+		
+		<div class="form-group col-md-1">
+			<input type="hidden" name="quantidade" class="form-control" value="{{ $p->quantidade }}"/>
+		</div>
+
 		<div class="col-md-3  ">
 			<label>Referencia</label>
 			<select disabled="" name="referencia_id" class="form-control" >
@@ -30,28 +39,14 @@
 
 
 		</div>
-
-
-
-		<input type="hidden" 
-		name="_token" value="{{{ csrf_token() }}}" />
-
-		
-		
-		<div class="form-group col-md-3">
-			<label>Quantidade em estoque</label>
-			<input  type="number" name="quantidade" class="form-control" value="{{ $p->quantidade }}"/>
-		</div>
-
 		<div class="form-group col-md-3">
 			<label>Quantidade vendida</label>
-			<input type="text" name="quantidadeVendida" class="form-control" "/>
+			<input type="number" name="quantidadeVendida" class="form-control" "/>
 		</div>
 
 		
-
 		<div class="form-group col-md-2">
-			<button type="text" class="btn btn-success btn-block margem">Alterar</button>
+			<button type="text" class="btn btn-success btn-block margem">Salvar</button>
 		</div>
 	</form>
 </div>
