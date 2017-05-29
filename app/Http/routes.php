@@ -47,3 +47,7 @@ Route::get('/tipodecouros/busca/{id}', 'TipoDeCouroController@busca');
 Route::post('/tipodecouros/alterado/{id}', 'TipoDeCouroController@alterado');
 
 Route::get('/tipodecouros/remove/{id}', 'TipoDeCouroController@remove');
+
+Route::get('/produtos/buscaParaVenda/{id}', 'ProdutoController@buscaParaVenda');
+
+Route::post('produtos/venda/{id}', 'ProdutoController@venda');

@@ -2,15 +2,6 @@
 
 @section('conteudo')
 
-@if (count($errors) > 0)
-<div class="alert alert-danger">
-	@foreach($errors->all() as $error) 
-	<ul> 
-		<li>{{$error}}</li>
-	</ul>
-	@endforeach
-</div>
-@endif
 
 
 <header>
@@ -27,12 +18,12 @@
 
 				<div class="form-group col-sm-5 col-md-5">
 					<label>E-mail</label>
-					<input name="email" class="form-control" />
+					<input name="email" class="form-control" placeholder="Digite seu E-mail" />
 				</div>
 
 				<div class="form-group col-sm-3 col-md-4">
 					<label>Senha</label>
-					<input type="password" name="password" class="form-control" />
+					<input type="password" name="password" class="form-control" placeholder="Senha" />
 				</div>	
 
 				<div class="form-group col-sm-3 col-md-2 margem">

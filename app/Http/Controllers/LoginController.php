@@ -19,12 +19,13 @@ class LoginController extends Controller {
 		//fazer login
 		//se as credenciais existem mostra
 		if(Auth::attempt($credenciais)){
-			return redirect('/produtos');;
+			return redirect('/produtos');
 		}else{
-			return "O usuario não esta logado";
+			
+			return redirect('/login');
 		}
 
-		//retornar pagina
+		
 	}
 
 }
